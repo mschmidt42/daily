@@ -11,8 +11,13 @@ public class App
         JFrame frame = new JFrame("Daily");
 
         // Create a new JLabel with the three bullet points
-        JLabel label = new JLabel("<html><ul><li>Was habe ich gestern erreicht?</li><li>Was habe ich heute geplant?</li><li>Wobei habe ich Probleme?</li></ul></html>");
-        label.setFont(new Font("Arial", Font.PLAIN, 20));
+         JLabel label = new JLabel("<html>" + 
+            "<ul style='font-size: 20pt; line-height: 30pt;'>"  +
+            "<li>Was habe ich gestern erreicht?</li>" +
+            "<li>Was habe ich heute geplant?</li>" +
+            "<li>Wobei habe ich Probleme?</li>" +
+            "</ul></html>");
+
 
         // Add the label to the frame's content pane
         frame.getContentPane().add(label);
@@ -22,7 +27,7 @@ public class App
 
         
         // Set the size of the frame
-        frame.setSize(500, 200);
+        frame.setSize(600, 260);
 
         // Set the default close operation of the frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
