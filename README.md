@@ -1,4 +1,4 @@
-# A Window displying the Daily Rules
+# A Window displaying the Daily Rules
 
 generated ba CharGPT
 
