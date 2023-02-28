@@ -8,3 +8,5 @@ generated ba CharGPT
   * Was habe ich gestern erreicht?
   * Was habe ich heute geplant?
   * Wobei habe ich Probleme 
+
+![grafik](https://user-images.githubusercontent.com/104491997/221993516-8823377d-0d7d-4a2e-988d-e2f270eef5aa.png)
