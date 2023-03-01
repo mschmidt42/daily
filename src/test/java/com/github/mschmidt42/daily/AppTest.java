@@ -27,7 +27,7 @@ public class AppTest
         assertTrue(frame.isVisible());
 
         // Check that the frame's title is "Daily"
-        assertEquals("Daily", frame.getTitle());
+        assertEquals("Daily 2.0", frame.getTitle());
 
         // Check that the label contains the expected text
         JLabel label = (JLabel) frame.getContentPane().getComponent(0);
