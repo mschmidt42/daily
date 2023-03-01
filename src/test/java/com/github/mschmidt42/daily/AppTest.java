@@ -1,38 +1,32 @@
 package com.github.mschmidt42.daily;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
+import javax.swing.*;
+import java.awt.*;
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+    @Test
+    public void testAppMain() {
+        App app = new App();
+        String[] args = new String[]{};
+        app.appMain(args);
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+        // Check that the frame is visible
+        JFrame frame = (JFrame) Frame.getFrames()[0];
+        Assertions.assertTrue(frame.isVisible());
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+        // Check that the frame's title is "Daily"
+        Assertions.assertEquals("Daily", frame.getTitle());
+
+        // Check that the label contains the expected text
+        JLabel label = (JLabel) frame.getContentPane().getComponent(0);
+        Assertions.assertTrue(label.getText().contains("Was habe ich gestern erreicht?"));
+        Assertions.assertTrue(label.getText().contains("Was habe ich heute geplant?"));
+        Assertions.assertTrue(label.getText().contains("Was hält mich auf?"));
     }
 }
